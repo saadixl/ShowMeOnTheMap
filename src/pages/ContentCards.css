@@ -1,0 +1,138 @@
+/* ═══════════════════════════════════════════════════════════════
+   Shared card-based content sections for site pages
+   ═══════════════════════════════════════════════════════════════ */
+
+.content-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-card {
+  padding: 20px 22px;
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.35);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.content-card:hover {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.content-card--accent {
+  border-color: rgba(56, 189, 248, 0.2);
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(56, 189, 248, 0.06), transparent 60%),
+    rgba(15, 23, 42, 0.4);
+}
+
+.content-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.content-card__icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.content-card__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #f0f4f8;
+}
+
+.content-card__body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b6c0ce;
+}
+
+.content-card__body a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.content-card__body a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+.content-card__body strong {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.content-card__list {
+  margin: 0;
+  padding: 0 0 0 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b6c0ce;
+}
+
+.content-card__list li {
+  margin-bottom: 6px;
+}
+
+.content-card__list li:last-child {
+  margin-bottom: 0;
+}
+
+.content-card__list strong {
+  color: #e2e8f0;
+}
+
+/* ── Grid layout for cards ── */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── FAQ accordion-style cards ── */
+
+.content-card--faq .content-card__question {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.content-card--faq .content-card__answer {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b6c0ce;
+}
+
+/* ── Intro text (above cards) ── */
+
+.content-intro {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #94a3b8;
+}

@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --right-rail-w: 44px;
+  --right-rail-pad: 8px;
+  --right-rail-total-w: calc(var(--right-rail-w) + 2 * var(--right-rail-pad));
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Fredoka', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}

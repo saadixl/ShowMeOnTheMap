@@ -1,0 +1,54 @@
+.app {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: 0;
+  background: radial-gradient(
+      ellipse 1400px 1000px at 15% 8%,
+      rgba(56, 189, 248, 0.06),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 1000px 800px at 88% 20%,
+      rgba(167, 139, 250, 0.05),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 1000px 820px at 40% 95%,
+      rgba(251, 113, 133, 0.04),
+      transparent 62%
+    ),
+    linear-gradient(180deg, #0f1923 0%, #0a1219 50%, #060d14 100%);
+}
+
+/* When top nav is present, stack vertically: nav on top, body below */
+.app--with-nav {
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Embed mode (loaded via ?embed=1, used by blog iframes) ── */
+/* Show the map plus zoom + recenter only; hide everything else. */
+.app--embed .right-rail__icon-btn--overlays,
+.app--embed .empire-side-panel,
+.app--embed .empire-panel-scrim,
+.app--embed .map-ui-column,
+.app--embed .location-consent-banner {
+  display: none !important;
+}

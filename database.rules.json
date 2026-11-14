@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "visited-countries": {
+          "$code": {
+            ".validate": "newData.val() === true || !newData.exists()"
+          }
+        },
+        "visitor-country-code": {
+          ".validate": "!newData.exists() || (newData.isString() && newData.val().matches(/^[A-Z]{2}$/))"
+        },
+        "location-banner-dismissed": {
+          ".validate": "!newData.exists() || newData.val() === true || newData.val() === false"
+        }
+      }
+    }
+  }
+}
